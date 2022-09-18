@@ -49,5 +49,5 @@ resource "local_file" "TF_key" {
 
 output "PUBLIC_IP_ADDRESS" {
 
-  value = aws_instance.web.public_ip
+  value = aws_instance.web[*].public_ip
 }
