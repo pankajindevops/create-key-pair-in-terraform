@@ -1,7 +1,24 @@
 
+# Download the provider files for AWS
+terraform {
+
+  required_providers {
+
+    aws = {
+
+      source  = "hashicorp/aws"
+      version = "~> 4.30.0"
+    }
+  }
+}
+
 provider "aws" {
-  profile = "default"
+
+  shared_credentials_file = "/home/pankajsharma/.aws/credentials"
+  profile                  = "default"
+
   region  = "us-east-1"
+
 }
 
 
